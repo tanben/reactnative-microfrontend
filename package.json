@@ -1,0 +1,10 @@
+{
+  "name": "sample-reactnative-mfe",
+  "private": true,
+  "scripts": {
+    "start:app1": "npm --prefix app1 start",
+    "start:host": "npm --prefix host start",
+    "ios:host": "npm --prefix host run ios",
+    "ios:app1": "npm --prefix app1 run ios"
+  }
+}
