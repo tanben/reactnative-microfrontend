@@ -1,7 +1,9 @@
 # React Native Micro frontend
-This sample application uses Re.Pack for module federation.
+This is a sample LaunchDarkly React native SDK micro frontend application using Re.Pack for module federation.
 
+![](./rn-demo.gif)
 ## Requirements
+* LaunchDarkly account
 * React v18.2.0
 * React Native v0.71.12
 * LaunchDarkly React Native SDK v7.1.6
@@ -9,6 +11,10 @@ This sample application uses Re.Pack for module federation.
 
 
 ## Installation
+>`Note:` For this application create two(2) LaunchDarkly projects with these feature flags:
+>- **`color`** STRING type assign a color for the on and off states for example: `red` for **ON** and `grey` for **OFF**.
+>- **`enable-dark-mode`** (optional), BOOLEAN type true or false.
+
 1. Update the Host and App1 host/Config.js and app1/Config.js file with your project `mobileKey` (required) other properties are optional.
 
 ```
