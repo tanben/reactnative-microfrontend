@@ -8,14 +8,19 @@ This is a sample LaunchDarkly React native SDK micro frontend application using 
 * React Native v0.71.12
 * LaunchDarkly React Native SDK v7.1.6
 * Re.pack v3.4.0
-
+* [IOS Simulator](https://developer.apple.com/documentation/xcode/installing-additional-simulator-runtimes)
 
 ## Installation
 >`Note:` For this application create two(2) LaunchDarkly projects with these feature flags:
 >- **`color`** STRING type assign a color for the on and off states for example: `red` for **ON** and `grey` for **OFF**.
 >- **`enable-dark-mode`** (optional), BOOLEAN type true or false.
 
-1. Update the Host and App1 host/Config.js and app1/Config.js file with your project `mobileKey` (required) other properties are optional.
+1. Install the dependencies
+```
+npm run install
+
+```
+2. Update the Host and App1 host/Config.js and app1/Config.js file with your project `mobileKey` (required) other properties are optional.
 
 ```
 const ldProjects = {

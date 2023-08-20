@@ -2,6 +2,9 @@
   "name": "sample-reactnative-mfe",
   "private": true,
   "scripts": {
+    "install": "npm run install:app1 && npm run install:host",
+    "install:app1": "cd app1 && npm install && npx pod-install",
+    "install:host": "cd host && npm install && npx pod-install",
     "start:app1": "npm --prefix app1 start",
     "start:host": "npm --prefix host start",
     "ios:host": "npm --prefix host run ios",
