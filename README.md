@@ -1,5 +1,5 @@
 # React Native Micro frontend
-This is a sample LaunchDarkly React native SDK micro frontend application using Re.Pack for module federation.
+This is an example of a micro frontend application using the LaunchDarkly React Native SDK and Re.Pack for module federation.
 
 ![](./rn-demo.gif)
 ## Requirements
