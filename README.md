@@ -1,8 +1,15 @@
-# React Native Micro frontend
-This is an example of a micro frontend application using the LaunchDarkly React Native SDK and Re.Pack for module federation.
+# React Native LaunchDarkly Micro Frontend Demo
+This project demonstrates how to build a micro frontend application using React Native, LaunchDarkly, and Re.Pack for module federation.
 
 ![](./rn-demo.gif)
-## Requirements
+
+## Features
+
+* Utilizes LaunchDarkly for feature flag management
+* Implements module federation with Re.Pack
+* Returns flag variations based on evaluated context.
+
+## Prerequisites
 * LaunchDarkly account
 * React v18.2.0
 * React Native v0.71.12
@@ -10,26 +17,36 @@ This is an example of a micro frontend application using the LaunchDarkly React 
 * Re.pack v3.4.0
 * [IOS Simulator](https://developer.apple.com/documentation/xcode/installing-additional-simulator-runtimes)
 
-## Installation
+## Setup
 >`Note:` For this application create two(2) LaunchDarkly projects with these feature flags:
 >- **`color`** STRING type assign a color for the on and off states for example: `red` for **ON** and `grey` for **OFF**.
 >- **`enable-dark-mode`** (optional), BOOLEAN type true or false.
 
-1. Install the dependencies
+1. Clone the repository:
 ```
-npm run install
+git clone https://github.com/your-username/react-native-micro-frontend.git
+cd react-native-micro-frontend
+```
+2. Install dependencies:
 
 ```
-2. Update the Host and App1 host/Config.js and app1/Config.js file with your project `mobileKey` (required) other properties are optional.
+npm run install
+```
+3. Create two LaunchDarkly projects with the following feature flags:
+
+* color (STRING): Assign a color for the on and off states (e.g., red for ON and grey for OFF).
+* enable-dark-mode (BOOLEAN, optional): Enable or disable dark mode.
+
+
+4. Update the host/Config.js and app1/Config.js files with your LaunchDarkly project's mobileKey. Other properties are optional.
 
 ```
 const ldProjects = {
   MFE1: {
     key: '',
     url: '',
-    mobileKey: mobileKey: 'your mobile key',
+    mobileKey: 'your mobile key',
   },
-
   MFE2: {
     key: '',
     url: '',
@@ -37,13 +54,12 @@ const ldProjects = {
   },
 };
 ```
-
-For the host/Config.js, set the mobileKey from app1 in the `secondaryMobileKeys`
+5. In host/Config.js, set the mobileKey from app1 in the secondaryMobileKeys object:
 ```
 const ldConfig = {
   mobileKey: ldProjects.MFE2.mobileKey,
   secondaryMobileKeys: {
-    'app1':'<mobile key from app1 container>'
+    'app1': '<mobile key from app1 container>'
   },
   ...
 }
