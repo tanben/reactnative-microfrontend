@@ -18,14 +18,10 @@ This project demonstrates how to build a micro frontend application using React 
 * [IOS Simulator](https://developer.apple.com/documentation/xcode/installing-additional-simulator-runtimes)
 
 ## Setup
->`Note:` For this application create two(2) LaunchDarkly projects with these feature flags:
->- **`color`** STRING type assign a color for the on and off states for example: `red` for **ON** and `grey` for **OFF**.
->- **`enable-dark-mode`** (optional), BOOLEAN type true or false.
-
 1. Clone the repository:
 ```
-git clone https://github.com/your-username/react-native-micro-frontend.git
-cd react-native-micro-frontend
+git clone https://github.com/tanben/sample-reactnative-mfe
+cd sample-reactnative-mfe
 ```
 2. Install dependencies:
 
